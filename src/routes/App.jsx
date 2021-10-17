@@ -3,19 +3,22 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Layout from "../containers/Layout";
 import Login from "../containers/Login";
 import RecoveryPassword from "../containers/RecoveryPassword";
+import NotFound from "../pages/NotFound";
+import Home from "../pages/Home";
+
 import "../styles/global.css";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Switch>
-        <Layout>
+      <Layout>
+        <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/recoverpassword" component={RecoveryPassword} />
-          <Route component={NotFound} />
-        </Layout>
-      </Switch>
+          <Route path="*" component={NotFound} />
+        </Switch>
+      </Layout>
     </BrowserRouter>
   );
 };
