@@ -1,4 +1,4 @@
-const path = require("patch");
+const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
@@ -7,8 +7,9 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
   },
+  mode: "development",
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: [".jsx", ".js"],
   },
   module: {
     rules: [
@@ -22,7 +23,7 @@ module.exports = {
       {
         test: /\.html$/,
         use: {
-          loader: "html loader",
+          loader: "html-loader",
         },
       },
     ],
