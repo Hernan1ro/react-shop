@@ -3,8 +3,9 @@ import "../styles/ProductItem.scss";
 import addToCart from "@icons/bt_add_to_cart.svg";
 
 const ProductItem = () => {
+  const [item, setItem] = React.useState([]);
   const handleClick = () => {
-    setItem("Hola Mundo");
+    setItem([]);
   };
   return (
     <div className="ProductItem">
