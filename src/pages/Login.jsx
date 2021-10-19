@@ -9,8 +9,8 @@ const Login = () => {
     event.preventDefault();
     const formData = new FormData(form.current);
     const usuario = {
-      name: formData.get("email"),
-      email: formData.get("password"),
+      password: formData.get("password"),
+      email: formData.get("email"),
     };
     console.log(usuario);
   };
