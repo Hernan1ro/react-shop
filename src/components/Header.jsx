@@ -35,8 +35,10 @@ const Header = () => {
         </ul>
       </div>
       <div className="navbar-right">
-        <ul onClick={handleToggle}>
-          <li className="navbar-email">platzi@example.com</li>
+        <ul>
+          <li onClick={handleToggle} className="navbar-email">
+            platzi@example.com
+          </li>
           <li className="navbar-shopping-cart">
             <img src={shoppingCart} alt="shopping cart" />
             <div>2</div>
